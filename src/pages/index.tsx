@@ -32,12 +32,12 @@ export default function Home({ products }: HomeProps) {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Home | Ignite Shop</title>
       </Head>
       <HomeContainer ref={sliderRef} className="keen-slider" >
         {products.map((product) => {
           return (
-            <Link href={`/product/${product.id}`} key={product.id}>
+            <Link href={`/product/${product.id}`} key={product.id} prefetch={false}>
               <Product className="keen-slider__slide">
                 <Image src={product.imageUrl}  width={520} height={480} alt={product.name} />
                 
